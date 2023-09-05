@@ -5,6 +5,7 @@ import TopButtons from './Components/TopButtons';
 import Inputs from './Components/Inputs';
 import TimeAndLocation from './Components/TimeAndLocation';
 import TemperatureAndDetails from './Components/TemperatureAndDetails';
+import Forecast from './Components/Forecast';
 
 function App() {
   return (
@@ -15,11 +16,9 @@ function App() {
     <Inputs/>
 
     
-    <TimeAndLocation/>
-
-
-    
+    <TimeAndLocation/>    
     <TemperatureAndDetails/>
+    <Forecast/>
   </div>
   );
 }
