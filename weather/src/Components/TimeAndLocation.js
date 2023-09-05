@@ -2,16 +2,19 @@ import React from 'react'
 
 const TimeAndLocation = () => {
   return (
-    <div className='flex  items-center justify-center my-6  '>
-      <p className='text-white text-xl font-extralight'>
-        Wensday, 31 May 2023 |Local time: 4:00 PM
-
+    <div>
+    <div className='flex items-center justify-center my-6'>
+      <p className=' text-white text-xl font-extralight'>
+       Wensday, 05|September 2023|Local time:15:39
       </p>
-      <div className='flex  items-center justify-center my-3'>
-        <p className='text-white text-3xl font-medium'>Nairobi Kenya</p>
-      </div>
     </div>
-  
+    <div className='flex items-center  justify-center my-3'>
+      <p className='text-white  text-3xl font-medium'>Nairobi KE</p>
+
+
+    </div>
+    </div>
+    
   )
 }
 

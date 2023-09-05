@@ -16,6 +16,9 @@ function App() {
 
     
     <TimeAndLocation/>
+
+
+    
     <TemperatureAndDetails/>
   </div>
   );
