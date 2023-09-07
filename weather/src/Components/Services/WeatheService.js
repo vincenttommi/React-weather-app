@@ -98,9 +98,25 @@ const formattedForecastWeather = (data) => {
 
         return{
 
-            title : formatToLocalTime(d.dt,timezone,'hh:mm a')
+            title : formatToLocalTime(d.dt,timezone,'ccc'),
+            temp: d.temp.day, 
+            icon:d.weather[0].icon
         }
-    })
+    });
+
+
+    dialy =  dialy.slice(1,6).map(d => {
+        
+        return{
+
+            title:formatToLocalTime(d.dt, timezone, 'hh:mm a'),
+            temp: d.temp.day,
+            icon:d.weather[0].icon
+        }
+
+    });
+
+    return {timezone, dialy, hourly};
 }
 
 const getFormattedWeatherData = async (searchParams) => {
@@ -119,7 +135,7 @@ const getFormattedWeatherData = async (searchParams) => {
     })
     .then(formattedForecastWeather)
 
-    return formattedData;
+    return {...formattedCurrentWeather, ...formattedForecastWeather};
   } catch (error) {
     throw new Error("Failed to fetch weather data");
   }
