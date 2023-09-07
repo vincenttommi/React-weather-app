@@ -6,19 +6,29 @@ import Inputs from './Components/Inputs';
 import TimeAndLocation from './Components/TimeAndLocation';
 import TemperatureAndDetails from './Components/TemperatureAndDetails';
 import Forecast from './Components/Forecast';
+import getWeatherData from './Components/Services/WeatheService';
 
 function App() {
+
+const fetcWeather = async () =>{
+  const data  = await getWeatherData('weather', {q: "Dubai"});
+  console.log(data);
+};
+fetcWeather();
+
   return (
   <div className='mx-auto max-w-screen-md mt-4 py-5 px-32 bg-gradient-to-r from-cyan-700 to-blue-700 h-fit shadow-xl  '>
 
 
     <TopButtons/>
-    <Inputs/>
+    <Inputs/> 
 
     
     <TimeAndLocation/>    
     <TemperatureAndDetails/>
-    <Forecast/>
+    <Forecast  title="hourlyforecast"/>
+    <Forecast  title="Daily forecast"/>
+
   </div>
   );
 }

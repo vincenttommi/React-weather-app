@@ -14,16 +14,16 @@ const cities = [
     },
     {
         id:3,
-        title:"New-york",
+        title:"Nakuru",
     },
     {
       id:4,
-      title:"Las-Vegas",
+      title:"Accra",
 
     },
     {
     id:5,
-    title:"Mombasas",
+    title:"Mombasa",
 
     }
 
